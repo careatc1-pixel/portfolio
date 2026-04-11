@@ -29,7 +29,7 @@ export default function Hero() {
           }}
         >
           <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-          Available for opportunities
+          Serving Businesses Across India
         </motion.div>
 
         {/* Name */}
@@ -45,7 +45,7 @@ export default function Hero() {
     mb-4
   "
         >
-          Hemant Bhatnagar • Software Engineer
+          Atharv Tech Co. • IT Support & Automation Experts
         </motion.p>
 
         {/* Heading */}
@@ -60,9 +60,9 @@ export default function Hero() {
     leading-tight
   "
         >
-          From interface to infrastructure,
+          Reliable IT Support, Smarter
           <span className="block bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
-            I build complete digital products.
+            Automation for Your Business.
           </span>
         </motion.h1>
 
@@ -79,22 +79,22 @@ export default function Hero() {
     mx-auto
   "
         >
-          Frontend-focused software engineer experienced in building scalable
-          full-stack applications using modern web technologies, databases, and
-          cloud environments. Currently exploring industry-level system design
-          and architecture to create reliable, production-ready systems.
+Atharv Tech Co. delivers expert IT support and intelligent automation
+          solutions to businesses in Delhi and beyond. From troubleshooting and
+          infrastructure management to workflow automation, we help you stay
+          efficient, secure, and always operational.
         </motion.p>
         {/* Buttons */}
-      <motion.div
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  className="mt-10 flex items-center justify-center gap-4"
->
-  {/* View Projects */}
-  <Link
-    href="#projects"
-    className="
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mt-10 flex items-center justify-center gap-4"
+        >
+          {/* View Projects */}
+          <Link
+            href="#projects"
+            className="
       inline-flex items-center
       px-6 py-3
       rounded-xl
@@ -103,22 +103,22 @@ export default function Hero() {
       hover:opacity-90
       transition
     "
-  >
-    View Projects
-    <ArrowRight className="ml-2" size={18} />
-  </Link>
+          >
+            Our Services
+            <ArrowRight className="ml-2" size={18} />
+          </Link>
 
-  {/* Contact */}
-  <Link href="#contact">
-    <Button
-      size="lg"
-      variant="outline"
-      className="rounded-xl backdrop-blur-xl"
-    >
-      Contact Me
-    </Button>
-  </Link>
-</motion.div>
+          {/* Contact */}
+          <Link href="#contact">
+            <Button
+              size="lg"
+              variant="outline"
+              className="rounded-xl backdrop-blur-xl"
+            >
+              Get in Touch
+            </Button>
+          </Link>
+        </motion.div>
       </div>
 
       {/* Background Glow */}

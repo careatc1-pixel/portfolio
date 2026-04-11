@@ -10,7 +10,6 @@ export default function Contact() {
   return (
     <section id="contact" className="py-8">
       <div className="max-w-5xl mx-auto px-4">
-
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -22,8 +21,8 @@ export default function Contact() {
         </motion.h2>
 
         <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
-          Have a project idea, opportunity, or just want to say hello?
-          Feel free to reach out — I’m always open to meaningful conversations.
+          Have a project idea, opportunity, or just want to say hello? Feel free
+          to reach out — I’m always open to meaningful conversations.
         </p>
 
         {/* Glass Card */}
@@ -45,34 +44,13 @@ export default function Contact() {
           }}
         >
           <div className="grid md:grid-cols-2 gap-8">
-
             {/* Left Info */}
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold">
-                Contact Information
-              </h3>
+              <h3 className="text-xl font-semibold">Contact Information</h3>
 
               <div className="flex items-center gap-3 text-sm">
                 <Mail size={18} />
-                <span>hemantbhatnagar0005@email.com</span>
-              </div>
-
-              <div className="flex gap-4 mt-4">
-                <a
-                  href="#"
-                  className="p-2 rounded-lg border hover:scale-110 transition"
-                  style={{ borderColor: "rgb(var(--border))" }}
-                >
-                  <Github size={18} />
-                </a>
-
-                <a
-                  href="#"
-                  className="p-2 rounded-lg border hover:scale-110 transition"
-                  style={{ borderColor: "rgb(var(--border))" }}
-                >
-                  <Linkedin size={18} />
-                </a>
+                <span>care.atc1@gmail.com</span>
               </div>
 
               <p className="text-sm text-muted-foreground pt-4">
@@ -85,13 +63,15 @@ export default function Contact() {
               <Input placeholder="Your Name" />
               <Input placeholder="Email Address" type="email" />
               <Textarea placeholder="Your Message" rows={5} />
-
               <Button className="w-full rounded-xl">
                 Send Message
                 <Send className="ml-2" size={16} />
               </Button>
+              <span className="block text-sm text-gray-500 text-center mt-2">
+                Contact me at{" "}
+                <span className="font-semibold">9310721874</span>
+              </span>
             </form>
-
           </div>
         </motion.div>
       </div>

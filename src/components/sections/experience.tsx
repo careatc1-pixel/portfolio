@@ -2,68 +2,67 @@
 
 import { motion } from "framer-motion";
 
-const experiences = [
+const process = [
   {
-    role: "Associate Javascript Developer",
-    company: "Leader Investment Group (LIG)",
-    period: "Oct 2025 — Present",
-    location: "Riyadh, Saudi Arabia · Remote",
+    step: "Step 01",
+    title: "Discovery & Consultation",
+    period: "Day 1",
+    location: "On-Site or Remote · Delhi NCR",
     points: [
-      "Contributing to enterprise IoT platforms covering Smart City and Discretal IoT use cases.",
-      "Building scalable frontend solutions aligned with product and business requirements.",
-      "Collaborating with backend, QA, and product teams to deliver production-ready features.",
+      "We start with a free consultation to understand your business, existing IT setup, and pain points.",
+      "Our team audits your current infrastructure, software stack, and security posture.",
+      "We identify gaps, risks, and automation opportunities specific to your operations.",
     ],
   },
   {
-    role: "Software Developer",
-    company: "Web2Success",
-    period: "Apr 2024 — Oct 2025",
-    location: "London, England · Remote",
+    step: "Step 02",
+    title: "Custom Solution Design",
+    period: "Day 2–3",
+    location: "Planning Phase",
     points: [
-      "Developed and maintained frontend features using React and Next.js.",
-      "Implemented SSR strategies to improve performance and user experience.",
-      "Worked closely with designers and backend teams for seamless integrations.",
-      "Participated in code reviews, debugging, and production issue resolution.",
+      "Based on the audit, we design a tailored IT support or automation plan aligned to your goals.",
+      "We provide a transparent scope of work, timeline, and pricing — no hidden costs.",
+      "Solutions are built to scale with your business, not just fix today's problems.",
     ],
   },
   {
-    role: "Software Developer Intern",
-    company: "OrangeFox",
-    period: "Nov 2023 — Apr 2024",
-    location: "North York, Ontario, Canada · Remote",
+    step: "Step 03",
+    title: "Implementation & Setup",
+    period: "Day 3–7",
+    location: "On-Site / Remote Deployment",
     points: [
-      "Built applications using Next.js with server-side rendering for performance and SEO.",
-      "Improved UI components and frontend architecture.",
-      "Gained hands-on experience in modern development workflows and collaboration.",
+      "Our engineers handle full deployment — network configuration, software setup, automation pipelines, or security hardening.",
+      "We minimize disruption to your operations with planned maintenance windows.",
+      "Every implementation is documented and handed over with full transparency.",
     ],
   },
   {
-    role: "Freelance Software Engineer",
-    company: "Freelance",
-    period: "Jul 2023 — Nov 2023",
-    location: "India · Remote",
+    step: "Step 04",
+    title: "Testing & Quality Assurance",
+    period: "Day 7–10",
+    location: "QA & Validation Phase",
     points: [
-      "Worked on backend and frontend web development projects using modern frameworks.",
-      "Delivered client-focused solutions with performance and scalability considerations.",
-      "Managed independent project lifecycles from development to deployment.",
+      "All systems, automations, and configurations are rigorously tested before going live.",
+      "We simulate real-world usage scenarios to catch edge cases early.",
+      "Security checks and performance benchmarks are validated against agreed standards.",
     ],
   },
   {
-    role: "Associate Software Engineer Intern",
-    company: "Vittoria Sempre",
-    period: "Jan 2023 — Jun 2023",
-    location: "Delhi, India · Remote",
+    step: "Step 05",
+    title: "Ongoing Support & Monitoring",
+    period: "Post Go-Live · Continuous",
+    location: "Remote & On-Site · 24/7",
     points: [
-      "Developed interactive frontend applications translating business requirements into UI solutions.",
-      "Worked with TypeScript and modern web technologies in team environments.",
-      "Participated in code reviews and collaborative development processes.",
+      "We provide continuous monitoring, proactive alerts, and regular maintenance to keep everything running smoothly.",
+      "Dedicated support channels ensure your team gets fast responses when issues arise.",
+      "Monthly reports keep you informed on system health, incidents, and improvements.",
     ],
   },
 ];
 
-export default function Experience() {
+export default function Process() {
   return (
-    <section id="experience" className="py-28">
+    <section id="process" className="py-28">
       <div className="max-w-5xl mx-auto px-4">
 
         {/* Heading */}
@@ -73,12 +72,12 @@ export default function Experience() {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold tracking-tight"
         >
-          Experience
+          How We Work
         </motion.h2>
 
         <p className="mt-4 text-muted-foreground max-w-2xl">
-          My professional journey working on real-world products, scalable
-          platforms, and modern web applications.
+          A simple, transparent process designed to get your IT running
+          smoothly — from the first call to long-term partnership.
         </p>
 
         {/* Timeline */}
@@ -94,7 +93,7 @@ export default function Experience() {
           />
 
           <div className="space-y-12">
-            {experiences.map((exp, index) => (
+            {process.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
@@ -107,14 +106,10 @@ export default function Experience() {
                 {/* Timeline Dot */}
                 <div className="absolute left-[7px] top-2">
                   <div
-                    className="
-                      w-4 h-4 rounded-full
-                      shadow-md
-                    "
+                    className="w-4 h-4 rounded-full shadow-md"
                     style={{
                       background: "rgb(var(--foreground))",
-                      boxShadow:
-                        "0 0 0 4px rgba(var(--navbar),0.6)",
+                      boxShadow: "0 0 0 4px rgba(var(--navbar),0.6)",
                     }}
                   />
                 </div>
@@ -137,39 +132,35 @@ export default function Experience() {
                 >
                   {/* Header */}
                   <div className="flex flex-wrap items-center justify-between gap-2">
-                    <h3 className="font-semibold text-lg">
-                      {exp.role}
-                    </h3>
+                    <div>
+                      <span className="text-xs font-medium text-indigo-400 uppercase tracking-widest">
+                        {item.step}
+                      </span>
+                      <h3 className="font-semibold text-lg mt-0.5">
+                        {item.title}
+                      </h3>
+                    </div>
 
                     <span
-                      className="
-                        text-xs
-                        px-3 py-1
-                        rounded-full
-                        border
-                      "
+                      className="text-xs px-3 py-1 rounded-full border"
                       style={{
                         borderColor: "rgb(var(--border))",
                         background: "rgba(var(--navbar),0.4)",
                       }}
                     >
-                      {exp.period}
+                      {item.period}
                     </span>
                   </div>
 
-                  <p className="text-sm text-muted-foreground mt-1">
-                    {exp.company}
-                  </p>
-
-                  <p className="text-xs text-muted-foreground">
-                    {exp.location}
+                  <p className="text-xs text-muted-foreground mt-1">
+                    {item.location}
                   </p>
 
                   {/* Points */}
                   <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                    {exp.points.map((point, i) => (
+                    {item.points.map((point, i) => (
                       <li key={i} className="flex gap-2">
-                        <span className="mt-[6px] w-1.5 h-1.5 rounded-full bg-foreground/60" />
+                        <span className="mt-[6px] w-1.5 h-1.5 rounded-full bg-foreground/60 shrink-0" />
                         {point}
                       </li>
                     ))}

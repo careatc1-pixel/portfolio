@@ -3,71 +3,57 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Bot, Cloud, HeadphonesIcon, Monitor, ShieldCheck, Wifi } from "lucide-react";
 
-const projects = [
+const services = [
   {
-    title: "FortexaSecure",
+    title: "IT Help Desk Support",
     description:
-      "Secure SaaS platform with encryption, authentication layers, and cloud architecture.",
-    link: "https://www.fortexasecure.com/",
-    image: "/projects/fortexa.png",
-    tech: ["Next.js", "Node.js", "MongoDB", "AWS"],
+      "Round-the-clock remote and on-site support for hardware issues, software errors, system crashes, and general IT troubleshooting — keeping your team productive without downtime.",
+    icon: HeadphonesIcon,
+    tags: ["Remote Support", "On-Site", "24/7 Availability"],
     highlight: true,
   },
   {
-    title: "Meradhan",
+    title: "Network Setup & Management",
     description:
-      "Digital investment platform with modern frontend architecture and financial tools.",
-    link: "https://www.meradhan.co/",
-    image: "/projects/meradhan.png",
-    tech: ["Next.js", "React", "API"],
+      "End-to-end network design, installation, and ongoing management including routers, switches, firewalls, VPNs, and LAN/WAN infrastructure for offices of all sizes.",
+    icon: Wifi,
+    tags: ["LAN/WAN", "Firewall", "VPN", "Router Config"],
   },
   {
-    title: "XInterview",
+    title: "Business Process Automation",
     description:
-      "AI-powered interview preparation platform with interactive UI and scalable backend.",
-    link: "https://www.xinterview.ai/",
-    image: "/projects/xinterview.png",
-    tech: ["Next.js", "AI", "Node"],
+      "We automate repetitive workflows, integrate your tools, and build scheduled pipelines — freeing your team from manual tasks and reducing operational overhead significantly.",
+    icon: Bot,
+    tags: ["Workflow Automation", "CRM Integration", "RPA"],
   },
   {
-    title: "XResume",
+    title: "Cybersecurity & Data Protection",
     description:
-      "Smart resume builder with optimized UX and responsive design.",
-    link: "https://xresume.ai/",
-    image: "/projects/xresume.png",
-    tech: ["React", "Next.js"],
+      "Protect your business with network monitoring, endpoint security, access control, and data backup strategies. We ensure compliance-ready configurations and fast incident response.",
+    icon: ShieldCheck,
+    tags: ["Endpoint Security", "Backup & Recovery", "Access Control"],
   },
   {
-    title: "LightSense IoT",
+    title: "Cloud Services & Migration",
     description:
-      "Enterprise IoT platform for smart lighting monitoring and analytics.",
-    link: "https://lesoft.com/product/lightsense/",
-    image: "/projects/lightsense.png",
-    tech: ["Dashboard", "IoT"],
+      "Seamlessly migrate your infrastructure to the cloud or manage your existing cloud environment on AWS or Azure. We handle setup, optimization, and ongoing cloud support.",
+    icon: Cloud,
+    tags: ["AWS", "Azure", "Cloud Migration", "SaaS Support"],
   },
   {
-    title: "Discretal IoT",
+    title: "System & Hardware Management",
     description:
-      "Industrial IoT solution for device monitoring and operational insights.",
-    link: "https://lesoft.com/product/discretal-iot/",
-    image: "/projects/discretal.png",
-    tech: ["IoT", "Analytics"],
+      "Proactive maintenance, diagnostics, and lifecycle management for desktops, laptops, servers, and peripherals — ensuring your hardware stays reliable and up to date.",
+    icon: Monitor,
+    tags: ["Hardware Repair", "Server Admin", "Preventive Maintenance"],
   },
-  {
-  title: "StudyNotion",
-  description:
-    "Full-stack learning management platform with course browsing, authentication, and interactive user experience.",
-  link: "https://www.studynotion.app/",
-  image: "/projects/studynotion.png",
-  tech: ["React", "Node.js", "MongoDB", "Express"],
-},
 ];
 
 export default function Project() {
   return (
-    <section id="projects">
+  <section id="services">
       <div className="max-w-6xl mx-auto px-4">
 
         {/* Heading */}
@@ -77,108 +63,82 @@ export default function Project() {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold tracking-tight"
         >
-          Products & Projects
+          Our Services
         </motion.h2>
 
         <p className="mt-4 text-muted-foreground max-w-2xl">
-          A selection of products and platforms I’ve worked on, including SaaS,
-          enterprise applications, and AI-powered solutions.
+          From everyday IT support to advanced automation — we deliver
+          reliable, scalable technology solutions tailored to your business
+          needs in Delhi and across NCR.
         </p>
 
         {/* Grid */}
         <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -8 }}
-              transition={{ duration: 0.4 }}
-              className={`
-                group
-                rounded-2xl
-                border
-                overflow-hidden
-                backdrop-blur-xl
-                ${
-                  project.highlight
-                    ? "ring-1 ring-indigo-500/40"
-                    : ""
-                }
-              `}
-              style={{
-                background: "rgba(var(--navbar),0.6)",
-                borderColor: "rgb(var(--border))",
-              }}
-            >
-              {/* Image */}
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition duration-500 group-hover:scale-110"
-                />
-
-                {/* Overlay */}
-                <div className="
-                  absolute inset-0
-                  bg-black/40
-                  opacity-0
-                  group-hover:opacity-100
-                  transition
-                  flex items-center justify-center
-                ">
-                  <Link
-                    href={project.link}
-                    target="_blank"
-                    className="
-                      px-4 py-2
-                      rounded-lg
-                      bg-white text-black
-                      text-sm font-medium
-                      flex items-center gap-2
-                    "
-                  >
-                    Visit
-                    <ArrowUpRight size={16} />
-                  </Link>
+          {services.map((service) => {
+            const Icon = service.icon;
+            return (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -8 }}
+                transition={{ duration: 0.4 }}
+                className={`
+                  group
+                  rounded-2xl
+                  border
+                  overflow-hidden
+                  backdrop-blur-xl
+                  flex flex-col
+                  ${service.highlight ? "ring-1 ring-indigo-500/40" : ""}
+                `}
+                style={{
+                  background: "rgba(var(--navbar),0.6)",
+                  borderColor: "rgb(var(--border))",
+                }}
+              >
+                {/* Icon Banner */}
+                <div
+                  className="
+                    h-36
+                    flex items-center justify-center
+                    bg-gradient-to-br from-indigo-500/10 to-purple-500/10
+                    border-b
+                  "
+                  style={{ borderColor: "rgb(var(--border))" }}
+                >
+                  <div className="p-4 rounded-2xl bg-indigo-500/10 border border-indigo-500/20">
+                    <Icon size={36} className="text-indigo-400" />
+                  </div>
                 </div>
-              </div>
 
-              {/* Content */}
-              <div className="p-5">
-                <h3 className="font-semibold text-lg">
-                  {project.title}
-                </h3>
+                {/* Content */}
+                <div className="p-5 flex flex-col flex-1">
+                  <h3 className="font-semibold text-lg">{service.title}</h3>
 
-                <p className="mt-2 text-sm text-muted-foreground">
-                  {project.description}
-                </p>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed flex-1">
+                    {service.description}
+                  </p>
 
-                {/* Tech Tags */}
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {project.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="
-                        text-xs
-                        px-2.5 py-1
-                        rounded-full
-                        border
-                      "
-                      style={{
-                        borderColor: "rgb(var(--border))",
-                        background: "rgba(var(--navbar),0.4)",
-                      }}
-                    >
-                      {t}
-                    </span>
-                  ))}
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {service.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs px-2.5 py-1 rounded-full border"
+                        style={{
+                          borderColor: "rgb(var(--border))",
+                          background: "rgba(var(--navbar),0.4)",
+                        }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
