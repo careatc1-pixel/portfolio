@@ -50,7 +50,9 @@ export default function Contact() {
 
               <div className="flex items-center gap-3 text-sm">
                 <Mail size={18} />
-                <span>care.atc1@gmail.com</span>
+                <a href="mailto:connect@atharvtechco.com?subject=Hello&body=Hi there,">
+                  connect@atharvtechco.com
+                </a>
               </div>
 
               <p className="text-sm text-muted-foreground pt-4">
@@ -69,7 +71,12 @@ export default function Contact() {
               </Button>
               <span className="block text-sm text-gray-500 text-center mt-2">
                 Contact me at{" "}
-                <span className="font-semibold">9310721874</span>
+                <a
+                  href="tel:+919310721874"
+                  className="font-semibold hover:underline"
+                >
+                  +91{' '}9310721874
+                </a>
               </span>
             </form>
           </div>

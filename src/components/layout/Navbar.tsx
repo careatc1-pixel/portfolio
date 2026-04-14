@@ -5,6 +5,7 @@ import { Code2, Layers, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import ThemeToggle from "../theme-toggle";
+import Image from "next/image";
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -31,32 +32,30 @@ export default function Navbar() {
           }}
         >
           {/* Logo */}
-          <Link
-            href="/"
-            className="
-    flex items-center justify-center
-    w-10 h-10
-    rounded-xl
-    border
-    backdrop-blur-xl
-    hover:scale-105
-    transition
-  "
-            style={{ borderColor: "rgb(var(--border))" }}
-          >
-            <Layers size={18} />
-          </Link>
+        <Link
+  href="/"
+  className="flex items-center justify-center w-12 h-12 rounded-full overflow-hidden border hover:scale-105 transition bg-white"
+  style={{ borderColor: "rgb(var(--border))" }}
+>
+  <Image
+    src="/projects/logo.png"
+    alt="Logo"
+    width={40}
+    height={40}
+    className="object-contain"
+  />
+</Link>
 
           {/* Links */}
           <div className="hidden md:flex gap-8 text-sm font-medium">
             <Link href="#about" className="hover:opacity-70 transition">
               About
             </Link>
-            <Link href="#projects" className="hover:opacity-70 transition">
-              Projects
+            <Link href="#services" className="hover:opacity-70 transition">
+              Services
             </Link>
-            <Link href="#experience" className="hover:opacity-70 transition">
-              Experience
+            <Link href="#how-we-work" className="hover:opacity-70 transition">
+              How We Work
             </Link>
             <Link href="#contact" className="hover:opacity-70 transition">
               Contact

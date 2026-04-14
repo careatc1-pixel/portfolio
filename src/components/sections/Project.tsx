@@ -15,13 +15,6 @@ const services = [
     highlight: true,
   },
   {
-    title: "Network Setup & Management",
-    description:
-      "End-to-end network design, installation, and ongoing management including routers, switches, firewalls, VPNs, and LAN/WAN infrastructure for offices of all sizes.",
-    icon: Wifi,
-    tags: ["LAN/WAN", "Firewall", "VPN", "Router Config"],
-  },
-  {
     title: "Business Process Automation",
     description:
       "We automate repetitive workflows, integrate your tools, and build scheduled pipelines — freeing your team from manual tasks and reducing operational overhead significantly.",

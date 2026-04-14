@@ -14,10 +14,10 @@ const page = () => {
       <section id="about" className="py-30">
         <About />
       </section>
-      <section id="about" className="py-30">
+      <section id="services" className="py-30">
         <Project />
       </section>
-      <section id="experience" className="py-30">
+      <section id="how-we-work" className="py-30">
         <Experience />
       </section>
       <section id="contact" className="py-30">

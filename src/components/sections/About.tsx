@@ -14,7 +14,7 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="text-3xl md:text-4xl font-bold tracking-tight"
         >
-          About Me
+          About Company
         </motion.h2>
 
         {/* Glass Card */}

@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative py-28 md:py-36">
+    <section className="relative py-28">
       <div className="max-w-4xl mx-auto text-center px-4">
         {/* Availability Badge */}
         <motion.div
@@ -79,7 +79,7 @@ export default function Hero() {
     mx-auto
   "
         >
-Atharv Tech Co. delivers expert IT support and intelligent automation
+          Atharv Tech Co. delivers expert IT support and intelligent automation
           solutions to businesses in Delhi and beyond. From troubleshooting and
           infrastructure management to workflow automation, we help you stay
           efficient, secure, and always operational.
