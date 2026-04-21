@@ -108,9 +108,9 @@ export default function Contact() {
               </span>
             </form>
           </div>
-          <div className="border-t border-slate-700 mt-5 px-8 py-4 flex items-center gap-6 overflow-x-auto whitespace-nowrap">
+          <div className="border-t border-slate-700 mt-5 px-8 py-4 flex items-center gap-6 flex-wrap whitespace-nowrap">
             {teamMembers.map((m, i) => (
-              <div key={m.name} className="flex items-center gap-1 shrink-0">
+              <div key={m.name} className="flex flex-wrap items-center gap-1 shrink-0">
                 <span className="text-sm font-medium">{m.name}</span>
                 <span className="text-xs text-gray-400">· {m.role}</span>
 
