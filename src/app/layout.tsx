@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ToastContainer } from "react-toastify";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,12 +16,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
- <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen bg-background text-foreground">
         <ThemeProvider>
           <Navbar />
           {children}
           <Footer />
+          <ToastContainer position="top-right" autoClose={3000} />
         </ThemeProvider>
       </body>
     </html>
