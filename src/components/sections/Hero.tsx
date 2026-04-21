@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative py-28">
+    <section className="relative py-2">
       <div className="max-w-4xl mx-auto text-center px-4">
         {/* Availability Badge */}
         <motion.div
